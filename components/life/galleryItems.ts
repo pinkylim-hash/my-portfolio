@@ -1,0 +1,16 @@
+export const galleryItems = [
+  { image: "/gallery/gallery-01.jpg", text: "" },
+  { image: "/gallery/gallery-02.jpg", text: "" },
+  { image: "/gallery/gallery-03.jpg", text: "" },
+  { image: "/gallery/gallery-04.jpg", text: "" },
+  { image: "/gallery/gallery-05.jpg", text: "" },
+  { image: "/gallery/gallery-06.jpg", text: "" },
+  { image: "/gallery/gallery-07.jpg", text: "" },
+  { image: "/gallery/gallery-08.jpg", text: "" },
+  { image: "/gallery/gallery-09.jpg", text: "" },
+  { image: "/gallery/gallery-10.jpg", text: "" },
+  { image: "/gallery/gallery-11.jpg", text: "" },
+  { image: "/gallery/gallery-12.jpg", text: "" },
+  { image: "/gallery/gallery-13.jpg", text: "" },
+  { image: "/gallery/gallery-14.jpg", text: "" },
+];

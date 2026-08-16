@@ -1,0 +1,227 @@
+.section {
+  position: relative;
+  overflow: visible;
+  padding: clamp(88px, 9vw, 132px) max(24px, calc((100vw - 1240px) / 2));
+  background: #fffaf2;
+  color: var(--ink);
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: minmax(240px, 3fr) minmax(0, 7fr);
+  gap: clamp(36px, 5vw, 70px);
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+
+.intro {
+  position: sticky;
+  top: 116px;
+  align-self: start;
+  min-height: 440px;
+  padding-top: 8px;
+}
+
+.eyebrow {
+  margin: 0 0 30px;
+  color: var(--yellow);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16.8px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.intro h2 {
+  max-width: 330px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-size: clamp(2.55rem, 3.8vw, 4.15rem);
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: -.04em;
+}
+
+.introText {
+  display: none;
+}
+
+.progress {
+  display: none;
+}
+
+.progress i {
+  height: 3px;
+  background: rgba(23, 22, 19, .18);
+  transition: background .35s var(--ease), transform .35s var(--ease);
+}
+
+.progress i.dotActive {
+  background: var(--yellow);
+  transform: scaleY(1.7);
+}
+
+.list {
+  display: grid;
+  gap: 24px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: minmax(220px, .58fr) minmax(0, 1.16fr);
+  gap: clamp(30px, 4.2vw, 58px);
+  min-height: 260px;
+  overflow: hidden;
+  border: 1px solid rgba(23, 22, 19, .045);
+  background: rgba(255, 250, 242, .62);
+  padding: clamp(32px, 4vw, 48px) clamp(36px, 4.8vw, 62px);
+  transition: border-color .35s var(--ease), background .35s var(--ease);
+}
+
+.item::before {
+  display: none;
+}
+
+.item:hover {
+  border-color: rgba(23, 22, 19, .08);
+  background: rgba(255, 250, 242, .78);
+}
+
+.meta,
+.body {
+  position: relative;
+  z-index: 1;
+}
+
+.meta {
+  align-self: start;
+  padding-top: clamp(18px, 3vw, 34px);
+}
+
+.copyPeriod {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--ink);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.35rem, 2.1vw, 1.82rem);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.015em;
+}
+
+.metaLine {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(.95rem, 1.08vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
+.metaLine span {
+  margin-right: 10px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.body {
+  display: grid;
+  align-self: center;
+  gap: clamp(24px, 3vh, 34px);
+}
+
+.textBlock {
+  position: relative;
+}
+
+.textBlock p {
+  max-width: 700px;
+  margin: 0;
+  color: var(--ink);
+  font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+  font-size: clamp(.98rem, 1.18vw, 1.12rem);
+  font-weight: 400;
+  line-height: 1.72;
+  letter-spacing: 0;
+}
+
+.textBlock strong {
+  color: var(--yellow);
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+
+.abilityList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  max-width: 700px;
+}
+
+.abilityList span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 118px;
+  min-height: 32px;
+  border: 1px solid rgba(132, 134, 139, .28);
+  border-radius: 999px;
+  background: rgba(255, 250, 242, .72);
+  padding: 0 22px;
+  color: var(--ink);
+  font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+  font-size: clamp(.8rem, .88vw, .88rem);
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 82px 18px;
+  }
+
+  .shell {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .intro {
+    position: relative;
+    top: auto;
+    min-height: auto;
+  }
+
+  .intro h2 {
+    font-size: clamp(4.2rem, 18vw, 7rem);
+  }
+
+  .list {
+    display: grid;
+    gap: 18px;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 30px 28px 34px;
+  }
+
+  .copyPeriod {
+    margin-bottom: 24px;
+    font-size: clamp(1.35rem, 8vw, 2rem);
+  }
+
+  .body {
+    gap: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    transition: none;
+  }
+}

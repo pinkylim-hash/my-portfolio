@@ -1,0 +1,127 @@
+.page {
+  min-height: 100svh;
+  background: #fffaf2;
+  color: var(--ink);
+  padding: clamp(34px, 5vw, 72px) max(24px, calc((100vw - 1180px) / 2)) clamp(82px, 10vw, 140px);
+}
+
+.backLink {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  color: #5e6067;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: .86rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(260px, .42fr) minmax(0, .58fr);
+  gap: clamp(40px, 7vw, 108px);
+  align-items: end;
+  min-height: min(64svh, 620px);
+  border-bottom: 1px solid rgba(23, 22, 19, .08);
+  padding-bottom: clamp(44px, 6vw, 78px);
+}
+
+.page > section::before {
+  display: none;
+  content: none;
+}
+
+.hero > p:first-child {
+  align-self: start;
+  margin: clamp(48px, 8vw, 96px) 0 0;
+  color: var(--yellow);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: .9rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  grid-column: 1 / -1;
+  width: min(799px, 100%);
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.hero h2 {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+  font-size: clamp(1.28rem, 2vw, 1.86rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.hero > p:last-child {
+  max-width: 620px;
+  margin: 0;
+  color: #53565e;
+  font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+  font-size: clamp(1.05rem, 1.48vw, 1.32rem);
+  font-weight: 400;
+  line-height: 1.78;
+}
+
+.caseStudy {
+  display: grid;
+  gap: 0;
+  margin-top: clamp(40px, 6vw, 82px);
+  border-top: 1px solid rgba(23, 22, 19, .08);
+}
+
+.caseStudy article {
+  display: grid;
+  grid-template-columns: minmax(180px, .28fr) minmax(160px, .26fr) minmax(0, .46fr);
+  gap: clamp(22px, 4vw, 64px);
+  border-bottom: 1px solid rgba(23, 22, 19, .08);
+  padding: clamp(28px, 4vw, 50px) 0;
+}
+
+.caseStudy span {
+  color: #8d8f99;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.caseStudy h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-size: clamp(1.65rem, 2.7vw, 3rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+
+.caseStudy p {
+  margin: 0;
+  color: #55575f;
+  font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+  font-size: clamp(.98rem, 1.2vw, 1.12rem);
+  font-weight: 400;
+  line-height: 1.76;
+}
+
+@media (max-width: 800px) {
+  .hero,
+  .caseStudy article {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+}

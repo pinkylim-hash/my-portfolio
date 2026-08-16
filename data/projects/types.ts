@@ -1,0 +1,20 @@
+export type Project = {
+  slug: string;
+  index: string;
+  category: string;
+  title: string;
+  challenge: string;
+  actions: string[];
+  results: { value: string; label: string }[];
+  color: string;
+  accent: string;
+  cover: string;
+  images: string[];
+  background: string;
+  audience: string;
+  role: string;
+  judgment: string;
+  process: string;
+  outputs: string[];
+  reflection: string;
+};

@@ -1,0 +1,228 @@
+.page {
+  min-height: 100svh;
+  background: var(--cream);
+  color: var(--ink);
+  padding: clamp(28px, 4vw, 52px);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.moduleList {
+  display: grid;
+  gap: 0;
+  margin-top: clamp(46px, 7vw, 92px);
+  border-top: 1px solid rgba(23, 22, 19, .12);
+}
+
+.page > section::before {
+  display: none;
+  content: none;
+}
+
+.module {
+  display: grid;
+  gap: clamp(26px, 3.4vw, 44px);
+  padding: clamp(46px, 6vw, 88px) 0;
+  border-bottom: 1px solid rgba(23, 22, 19, .08);
+}
+
+.moduleHeader {
+  display: grid;
+  justify-items: start;
+  gap: 0;
+  padding-bottom: clamp(4px, 1vw, 12px);
+}
+
+.moduleHeader span {
+  color: var(--yellow);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: .86rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.moduleBody {
+  display: grid;
+  grid-template-columns: minmax(280px, .38fr) minmax(0, .62fr);
+  gap: clamp(30px, 5vw, 78px);
+  align-items: start;
+}
+
+.moduleText {
+  display: grid;
+  gap: 22px;
+}
+
+.moduleText h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-size: clamp(1.8rem, 3vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+
+.copyBlock {
+  display: grid;
+  gap: 16px;
+}
+
+.label {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 34px;
+  margin: 0;
+  padding: 6px 14px;
+  background: #514131;
+  color: var(--yellow);
+  font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  line-height: 1.2;
+}
+
+.copyBlock > p:last-child {
+  max-width: 820px;
+  margin: 0;
+  color: #34363d;
+  font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.18rem);
+  line-height: 1.82;
+}
+
+.copyBlock ul {
+  display: grid;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0;
+  padding: 0;
+  color: #4e5058;
+  font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+  font-size: clamp(.98rem, 1.12vw, 1.08rem);
+  line-height: 1.74;
+  list-style: none;
+}
+
+.mediaPanel {
+  display: grid;
+  align-self: start;
+}
+
+.articleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 2.4vw, 30px);
+}
+
+.articleCard {
+  display: grid;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.articleCard span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(23, 22, 19, .07);
+  border-radius: 8px;
+  background: #fffaf2;
+}
+
+.articleCard img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .34s var(--ease), filter .34s var(--ease);
+}
+
+.coverPlaceholder {
+  display: grid !important;
+  width: 100%;
+  height: 100%;
+  place-content: center;
+  gap: 8px;
+  padding: 24px;
+  background: #514131;
+  color: var(--yellow);
+  font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+  text-align: center;
+}
+
+.coverPlaceholder b {
+  font-size: clamp(1.15rem, 1.8vw, 1.65rem);
+  letter-spacing: .08em;
+}
+
+.coverPlaceholder small {
+  color: rgba(255, 255, 255, .72);
+  font-size: .82rem;
+  letter-spacing: .08em;
+}
+
+.articleCard strong {
+  display: inline-flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--ink);
+  font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+  font-size: clamp(.96rem, 1.08vw, 1.08rem);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.articleCard:hover img {
+  filter: saturate(1.04) contrast(1.02);
+  transform: scale(1.035);
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(18px, 2.4vw, 30px);
+}
+
+.imageGrid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 1px solid rgba(23, 22, 19, .07);
+  border-radius: 8px;
+  background: #fffaf2;
+  object-fit: cover;
+}
+
+.imageGrid img:first-child {
+  grid-column: auto;
+}
+
+@media (max-width: 900px) {
+  .moduleBody {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .articleGrid,
+  .imageGrid {
+    grid-template-columns: 1fr;
+  }
+}

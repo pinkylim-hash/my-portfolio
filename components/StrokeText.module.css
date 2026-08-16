@@ -1,0 +1,152 @@
+.strokeText {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.triggerHover {
+  cursor: pointer;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: var(--stroke-text-height, 160px);
+  overflow: visible;
+}
+
+.stroke,
+.fill {
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  user-select: none;
+}
+
+.stroke {
+  stroke-dasharray: var(--stroke-text-dash);
+  stroke-dashoffset: var(--stroke-text-dash);
+}
+
+.fill {
+  opacity: 0;
+}
+
+.wipe {
+  transform: scaleX(0);
+  transform-origin: left center;
+  transform-box: fill-box;
+}
+
+.triggerMount .stroke,
+.triggerLoop .stroke {
+  animation: stroke-text-draw var(--stroke-text-draw-duration) cubic-bezier(.16, 1, .3, 1) forwards;
+}
+
+.triggerMount.fillFade .fill,
+.triggerLoop.fillFade .fill {
+  animation: stroke-text-fade var(--stroke-text-fill-duration) ease forwards;
+  animation-delay: var(--stroke-text-fill-delay);
+}
+
+.triggerMount.fillWipe .fill,
+.triggerLoop.fillWipe .fill {
+  opacity: 1;
+}
+
+.triggerMount.fillWipe .wipe,
+.triggerLoop.fillWipe .wipe {
+  animation: stroke-text-wipe var(--stroke-text-fill-duration) cubic-bezier(.16, 1, .3, 1) forwards;
+  animation-delay: var(--stroke-text-fill-delay);
+}
+
+.triggerLoop .stroke,
+.triggerLoop.fillFade .fill,
+.triggerLoop.fillWipe .wipe {
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.triggerHover .stroke {
+  stroke-dashoffset: 0;
+}
+
+.triggerHover.fillFade .fill,
+.triggerHover.fillWipe .fill {
+  opacity: 1;
+}
+
+.triggerHover.fillWipe .wipe {
+  transform: scaleX(1);
+}
+
+.triggerHover:hover .stroke {
+  animation: stroke-text-draw var(--stroke-text-draw-duration) cubic-bezier(.16, 1, .3, 1) forwards;
+}
+
+.triggerHover.fillFade:hover .fill {
+  animation: stroke-text-fade var(--stroke-text-fill-duration) ease forwards;
+  animation-delay: var(--stroke-text-fill-delay);
+}
+
+.triggerHover.fillWipe:hover .wipe {
+  animation: stroke-text-wipe var(--stroke-text-fill-duration) cubic-bezier(.16, 1, .3, 1) forwards;
+  animation-delay: var(--stroke-text-fill-delay);
+}
+
+.fillNone .fill {
+  opacity: 0;
+}
+
+@keyframes stroke-text-draw {
+  from {
+    stroke-dashoffset: var(--stroke-text-dash);
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke-text-wipe {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes stroke-text-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stroke,
+  .fill,
+  .wipe {
+    animation: none !important;
+  }
+
+  .stroke {
+    stroke-dashoffset: 0;
+  }
+
+  .fillFade .fill,
+  .fillWipe .fill {
+    opacity: 1;
+  }
+
+  .fillWipe .wipe {
+    transform: scaleX(1);
+  }
+}
