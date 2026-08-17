@@ -101,18 +101,30 @@ export function WhatShapesGallery() {
     <div className={styles.block}>
       <p className={styles.caption}>📷 用镜头捕捉美好</p>
       <div className={styles.shell} ref={shellRef}>
+        <div className={styles.fallbackGrid} aria-hidden="true">
+          {galleryItems.slice(0, 6).map((item, index) => (
+            <img
+              key={item.image}
+              src={item.image}
+              alt=""
+              loading={index < 2 ? "eager" : "lazy"}
+              decoding="async"
+            />
+          ))}
+        </div>
         {galleryImagesReady ? (
-          <CircularGallery
-            items={galleryItems}
-            bend={2.6}
-            borderRadius={0.035}
-            textColor="#f4c82e"
-            font='bold 24px Georgia, "Songti SC", serif'
-            scrollSpeed={2}
-            scrollEase={0.045}
-          />
+          <div className={styles.interactiveGallery}>
+            <CircularGallery
+              items={galleryItems}
+              bend={2.6}
+              borderRadius={0.035}
+              textColor="#f4c82e"
+              font='bold 24px Georgia, "Songti SC", serif'
+              scrollSpeed={2}
+              scrollEase={0.045}
+            />
+          </div>
         ) : null}
-        {!galleryImagesReady ? <div className={styles.placeholder} aria-hidden="true" /> : null}
       </div>
     </div>
   );

@@ -10,16 +10,39 @@
   background: var(--surface);
 }
 
-.placeholder {
+.fallbackGrid {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background:
-    linear-gradient(90deg, rgba(255, 250, 242, 0.86), rgba(244, 200, 46, 0.18), rgba(255, 250, 242, 0.86)),
-    var(--surface);
-  background-size: 220% 100%;
-  animation: gallery-placeholder 1.4s ease-in-out infinite;
-  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(180px, 1fr));
+  gap: clamp(12px, 1.7vw, 22px);
+  align-items: center;
+  padding: clamp(28px, 4vw, 56px);
+  opacity: 0.98;
+}
+
+.fallbackGrid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 22px 50px rgba(28, 24, 18, 0.14);
+}
+
+.fallbackGrid img:nth-child(even) {
+  transform: translateY(34px);
+}
+
+.fallbackGrid img:nth-child(3n) {
+  transform: translateY(-26px);
+}
+
+.interactiveGallery {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: var(--surface);
 }
 
 .caption {
@@ -32,18 +55,17 @@
   text-align: center;
 }
 
-@keyframes gallery-placeholder {
-  0% {
-    background-position: 120% 0;
-  }
-
-  100% {
-    background-position: -120% 0;
-  }
-}
-
 @media (max-width: 900px) {
   .shell {
     height: clamp(360px, 92vw, 520px);
+  }
+
+  .fallbackGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 22px;
+  }
+
+  .fallbackGrid img:nth-child(n) {
+    transform: none;
   }
 }
