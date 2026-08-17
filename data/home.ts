@@ -5,7 +5,7 @@ export const homePage = {
     backgroundRight: "Yuhua",
     eyebrow: "Pinky Lin · Brand Growth / Product Marketing",
     rightLabel: "WHAT I DO",
-    image: "/images/pinky-hero-1151.jpg",
+    image: "/images/pinky-hero-optimized.jpg",
     imageAlt: "Pinky 林育桦在欧洲旅行中",
     imageNote: "PINKY / 林育桦",
     stamp: ["MAKE", "IT", "REAL"],
