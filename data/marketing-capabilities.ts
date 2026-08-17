@@ -39,34 +39,34 @@ export const marketingCapabilities: MarketingCapability[] = [
       {
         slug: "single-page-design",
         title: "中文宣传单页",
-        image: "/images/case1-approach/single-page-design/general.png",
+        image: "/images/case1-approach/single-page-design/optimized/general.webp",
         href: "/product-marketing/single-page-design",
         asset: "/files/case1-approach/single-page-design/general.pdf",
         assetType: "pdf",
         documents: [
           {
             title: "AI 分选机",
-            image: "/images/case1-approach/single-page-design/general.png",
+            image: "/images/case1-approach/single-page-design/optimized/general.webp",
             asset: "/files/case1-approach/single-page-design/general.pdf",
           },
           {
             title: "柑橘分选",
-            image: "/images/case1-approach/single-page-design/citrus.png",
+            image: "/images/case1-approach/single-page-design/optimized/citrus.webp",
             asset: "/files/case1-approach/single-page-design/citrus.pdf",
           },
           {
             title: "柠檬分选",
-            image: "/images/case1-approach/single-page-design/lemon.png",
+            image: "/images/case1-approach/single-page-design/optimized/lemon.webp",
             asset: "/files/case1-approach/single-page-design/lemon.pdf",
           },
           {
             title: "百香果分选",
-            image: "/images/case1-approach/single-page-design/passion-fruit.png",
+            image: "/images/case1-approach/single-page-design/optimized/passion-fruit.webp",
             asset: "/files/case1-approach/single-page-design/passion-fruit.pdf",
           },
           {
             title: "苹果分选",
-            image: "/images/case1-approach/single-page-design/apple.png",
+            image: "/images/case1-approach/single-page-design/optimized/apple.webp",
             asset: "/files/case1-approach/single-page-design/apple.pdf",
           },
         ],
@@ -74,7 +74,7 @@ export const marketingCapabilities: MarketingCapability[] = [
       {
         slug: "flyer",
         title: "英文宣传单页",
-        image: "/images/case1-approach/flyer.png",
+        image: "/images/case1-approach/optimized/flyer.webp",
         href: "/product-marketing/flyer",
         asset: "/files/case1-approach/flyer.pdf",
         assetType: "pdf",
@@ -82,7 +82,7 @@ export const marketingCapabilities: MarketingCapability[] = [
       {
         slug: "website-upgrade",
         title: "官网升级",
-        image: "/images/website-upgrade-detail/version3-home.png",
+        image: "/images/website-upgrade-detail/optimized/version3-home.webp",
         href: "/product-marketing/website-upgrade",
         asset: "/images/case1-approach/website-upgrade.png",
         assetType: "image",
@@ -90,7 +90,7 @@ export const marketingCapabilities: MarketingCapability[] = [
       {
         slug: "product-manual",
         title: "产品手册",
-        image: "/images/case1-approach/product-manual.png",
+        image: "/images/case1-approach/optimized/product-manual.webp",
         href: "/product-marketing/product-manual",
         asset: "/files/case1-approach/product-manual.pdf",
         assetType: "pdf",
@@ -98,7 +98,7 @@ export const marketingCapabilities: MarketingCapability[] = [
       {
         slug: "brand-manual",
         title: "品牌手册",
-        image: "/images/case1-approach/brand-manual.png",
+        image: "/images/case1-approach/optimized/brand-manual.webp",
         href: "/product-marketing/brand-manual",
         asset: "/files/case1-approach/brand-manual.pdf",
         assetType: "pdf",
@@ -119,12 +119,12 @@ export const marketingCapabilities: MarketingCapability[] = [
     chineseTitle: "品牌内容传播",
     summary: "通过视觉、视频与品牌素材建设，提升品牌认知与产品影响力。",
     href: "/brand-communication",
-    previewImages: ["/images/brand-communication/product-video-preview-0809.png", "/images/ai-hardware-expo-01.jpg", "/images/ai-hardware-speksense.png"],
+    previewImages: ["/images/brand-communication/optimized/product-video-preview-0809.webp", "/images/ai-hardware-expo-01.jpg", "/images/ai-hardware-speksense.png"],
     materials: [
       {
         slug: "product-video",
         title: "产品宣传视频",
-        image: "/images/brand-communication/product-video-preview-0809.png",
+        image: "/images/brand-communication/optimized/product-video-preview-0809.webp",
         href: "/brand-communication#产品宣传视频",
         asset: "/images/brand-communication/product-video-preview-0809.png",
         assetType: "image",
@@ -132,7 +132,7 @@ export const marketingCapabilities: MarketingCapability[] = [
       {
         slug: "corporate-video",
         title: "企业宣传视频",
-        image: "/images/brand-communication/corporate-video-cover.jpg",
+        image: "/images/brand-communication/optimized/corporate-video-cover.webp",
         href: "/brand-communication#企业宣传视频",
         asset: "/images/brand-communication/corporate-video-cover.jpg",
         assetType: "image",
@@ -140,7 +140,7 @@ export const marketingCapabilities: MarketingCapability[] = [
       {
         slug: "short-video-ops",
         title: "短视频运营",
-        image: "/images/brand-communication/short-video-ops-02.jpg",
+        image: "/images/brand-communication/optimized/short-video-ops-02.webp",
         href: "/brand-communication#短视频运营",
         asset: "/images/brand-communication/short-video-ops-02.jpg",
         assetType: "image",
@@ -162,15 +162,15 @@ export const marketingCapabilities: MarketingCapability[] = [
     summary: "结合 SEO、内容营销与社媒运营，实现用户触达与品牌增长。",
     href: "/growth-marketing",
     previewImages: [
-      "/images/growth-marketing/articles/apple-global.jpg",
-      "/images/growth-marketing/customer-interviews/customer-case-01-cover.png",
-      "/images/growth-marketing/external-media/cctv-interview.png",
+      "/images/growth-marketing/articles/optimized/apple-global.webp",
+      "/images/growth-marketing/customer-interviews/optimized/customer-case-01-cover.webp",
+      "/images/growth-marketing/external-media/optimized/cctv-interview.webp",
     ],
     materials: [
       {
         slug: "wechat-articles",
         title: "公众号文章",
-        image: "/images/growth-marketing/articles/apple-global.jpg",
+        image: "/images/growth-marketing/articles/optimized/apple-global.webp",
         href: "/growth-marketing#公众号文章",
         asset: "/images/growth-marketing/articles/apple-global.jpg",
         assetType: "image",
@@ -178,7 +178,7 @@ export const marketingCapabilities: MarketingCapability[] = [
       {
         slug: "customer-cases",
         title: "客户案例",
-        image: "/images/growth-marketing/customer-interviews/customer-case-01-cover.png",
+        image: "/images/growth-marketing/customer-interviews/optimized/customer-case-01-cover.webp",
         href: "/growth-marketing#客户案例",
         asset: "/images/growth-marketing/customer-interviews/customer-case-01-cover.png",
         assetType: "image",
@@ -186,7 +186,7 @@ export const marketingCapabilities: MarketingCapability[] = [
       {
         slug: "external-media",
         title: "外部媒体合作",
-        image: "/images/growth-marketing/external-media/cctv-interview.png",
+        image: "/images/growth-marketing/external-media/optimized/cctv-interview.webp",
         href: "/growth-marketing#外部媒体合作",
         asset: "/images/growth-marketing/external-media/cctv-interview.png",
         assetType: "image",
@@ -208,32 +208,32 @@ export const marketingCapabilities: MarketingCapability[] = [
     summary: "通过展会、活动与行业合作，连接用户需求与商业机会。",
     href: "/field-marketing",
     previewImages: [
-      "/images/field-marketing/ifresh-1.jpg",
-      "/images/field-marketing/china-fruit-1.png",
-      "/images/field-marketing/asia-fruit-1.jpg",
+      "/images/field-marketing/optimized/ifresh-1.webp",
+      "/images/field-marketing/optimized/china-fruit-1.webp",
+      "/images/field-marketing/optimized/asia-fruit-1.webp",
     ],
     materials: [
       {
         slug: "field-exhibitions",
         title: "线下展会",
-        image: "/images/field-marketing/ifresh-1.jpg",
+        image: "/images/field-marketing/optimized/ifresh-1.webp",
         href: "/field-marketing",
         asset: "/images/field-marketing/ifresh-1.jpg",
         assetType: "image",
         documents: [
           {
             title: "iFresh 亚洲果蔬产业博览会",
-            image: "/images/field-marketing/ifresh-1.jpg",
+            image: "/images/field-marketing/optimized/ifresh-1.webp",
             asset: "/images/field-marketing/ifresh-1.jpg",
           },
           {
             title: "中国国际水果展",
-            image: "/images/field-marketing/china-fruit-1.png",
+            image: "/images/field-marketing/optimized/china-fruit-1.webp",
             asset: "/images/field-marketing/china-fruit-1.png",
           },
           {
             title: "Asia Fruit Logistica",
-            image: "/images/field-marketing/asia-fruit-1.jpg",
+            image: "/images/field-marketing/optimized/asia-fruit-1.webp",
             asset: "/images/field-marketing/asia-fruit-1.jpg",
           },
         ],
