@@ -36,7 +36,7 @@ export function MarketingCapabilitySection() {
                     {capability.materials?.map((material) => (
                       <Link className={styles.modulePreviewCard} href={material.href} key={material.slug}>
                         <span className={styles.modulePreviewWindow}>
-                          <img src={material.image} alt="" />
+                          <img loading="lazy" src={material.image} alt="" />
                           <ArrowUpRight size={18} strokeWidth={1.8} />
                         </span>
                         <strong>{material.title}</strong>
@@ -48,7 +48,7 @@ export function MarketingCapabilitySection() {
                     {capability.materials?.map((material) => (
                       <Link className={styles.materialCard} href={material.href} key={material.slug}>
                         <span className={styles.materialThumb}>
-                          <img src={material.image} alt="" />
+                          <img loading="lazy" src={material.image} alt="" />
                         </span>
                         <strong>{material.title}</strong>
                         <ArrowUpRight size={18} strokeWidth={1.8} />
@@ -60,7 +60,7 @@ export function MarketingCapabilitySection() {
                     <div className={styles.windowGrid} aria-hidden="true">
                       {previewImages.map((image, index) => (
                         <i key={`${capability.slug}-${index}`}>
-                          <img src={image} alt="" />
+                          <img loading="lazy" src={image} alt="" />
                         </i>
                       ))}
                     </div>
