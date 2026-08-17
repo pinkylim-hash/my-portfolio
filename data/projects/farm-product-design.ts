@@ -14,10 +14,10 @@ export const farmProductDesignProject: Project = {
   ],
   color: "#FFF5DE",
   accent: "#514131",
-  cover: "/images/farm-soda-case/2-2-oranges.jpg",
+  cover: "/images/farm-soda-case/optimized/2-2-oranges.jpg",
   images: [
-    "/images/farm-soda-case/fresh-to-juice.jpg",
-    "/images/farm-soda-case/2-2-oranges.jpg",
+    "/images/farm-soda-case/optimized/fresh-to-juice.jpg",
+    "/images/farm-soda-case/optimized/2-2-oranges.jpg",
     "/images/farm-soda-case/sales-toc.png",
     "/images/farm-soda-case/sales-tob.png",
   ],

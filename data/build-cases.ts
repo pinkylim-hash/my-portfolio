@@ -248,7 +248,7 @@ export const buildCases: BuildCase[] = [
       "推动供应链落地生产",
       "梳理卖点与市场表达",
     ],
-    image: "/images/farm-soda.jpg",
+    image: "/images/farm-soda-optimized.jpg",
     imageAlt: "农产品饮品化产品设计素材",
   },
 ];

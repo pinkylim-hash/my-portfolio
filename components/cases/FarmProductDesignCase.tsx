@@ -108,10 +108,10 @@ export function FarmProductDesignCase({ project }: { project: Project }) {
 
       <section className={styles.gallery}>
         <Reveal className={`${styles.galleryImage} ${styles.tallImage}`}>
-          <Image src="/images/farm-soda-case/fresh-to-juice.jpg" alt="爱媛汽水从鲜果到果汁的产品说明图" fill sizes="(max-width: 900px) 92vw, 44vw" />
+          <Image src="/images/farm-soda-case/optimized/fresh-to-juice.jpg" alt="爱媛汽水从鲜果到果汁的产品说明图" fill sizes="(max-width: 900px) 92vw, 44vw" />
         </Reveal>
         <Reveal className={`${styles.galleryImage} ${styles.tallImage}`}>
-          <Image src="/images/farm-soda-case/2-2-oranges.jpg" alt="每瓶爱媛汽水含 2.2 个爱媛的产品说明图" fill sizes="(max-width: 900px) 92vw, 44vw" />
+          <Image src="/images/farm-soda-case/optimized/2-2-oranges.jpg" alt="每瓶爱媛汽水含 2.2 个爱媛的产品说明图" fill sizes="(max-width: 900px) 92vw, 44vw" />
         </Reveal>
       </section>
 
