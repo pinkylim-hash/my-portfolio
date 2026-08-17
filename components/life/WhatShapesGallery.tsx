@@ -32,13 +32,18 @@ function preloadGalleryImages() {
     galleryItems.map(
       (item) =>
         new Promise<void>((resolve) => {
+          const timeout = window.setTimeout(resolve, 3500);
           const image = new window.Image();
-          image.onload = () => resolve();
-          image.onerror = () => resolve();
+          const done = () => {
+            window.clearTimeout(timeout);
+            resolve();
+          };
+          image.onload = done;
+          image.onerror = done;
           image.src = item.image;
 
           if (image.decode) {
-            image.decode().then(resolve).catch(resolve);
+            image.decode().then(done).catch(done);
           }
         }),
     ),
@@ -73,15 +78,22 @@ export function WhatShapesGallery() {
     if (!shouldLoadGallery || galleryImagesReady) return undefined;
 
     let cancelled = false;
+    const fallbackTimer = window.setTimeout(() => {
+      if (!cancelled) {
+        setGalleryImagesReady(true);
+      }
+    }, 4200);
 
     preloadGalleryImages().then(() => {
       if (!cancelled) {
+        window.clearTimeout(fallbackTimer);
         setGalleryImagesReady(true);
       }
     });
 
     return () => {
       cancelled = true;
+      window.clearTimeout(fallbackTimer);
     };
   }, [galleryImagesReady, shouldLoadGallery]);
 
