@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { marketingCapabilities } from "@/data/marketing-capabilities";
 import { projects } from "@/data/projects";
 
-const siteUrl = "https://my-portfolio-rho-blush-72.vercel.app";
+const siteUrl = "https://www.pinkylin.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://my-portfolio-rho-blush-72.vercel.app";
+const siteUrl = "https://www.pinkylin.com";
 
 export const metadata: Metadata = {
   title: {
