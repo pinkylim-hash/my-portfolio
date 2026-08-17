@@ -13,11 +13,13 @@
 .placeholder {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     linear-gradient(90deg, rgba(255, 250, 242, 0.86), rgba(244, 200, 46, 0.18), rgba(255, 250, 242, 0.86)),
     var(--surface);
   background-size: 220% 100%;
   animation: gallery-placeholder 1.4s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .caption {

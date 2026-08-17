@@ -27,9 +27,28 @@ const CircularGallery = dynamic<CircularGalleryProps>(
   },
 );
 
+function preloadGalleryImages() {
+  return Promise.allSettled(
+    galleryItems.map(
+      (item) =>
+        new Promise<void>((resolve) => {
+          const image = new window.Image();
+          image.onload = () => resolve();
+          image.onerror = () => resolve();
+          image.src = item.image;
+
+          if (image.decode) {
+            image.decode().then(resolve).catch(resolve);
+          }
+        }),
+    ),
+  );
+}
+
 export function WhatShapesGallery() {
   const shellRef = useRef<HTMLDivElement>(null);
   const [shouldLoadGallery, setShouldLoadGallery] = useState(false);
+  const [galleryImagesReady, setGalleryImagesReady] = useState(false);
 
   useEffect(() => {
     const shell = shellRef.current;
@@ -50,11 +69,27 @@ export function WhatShapesGallery() {
     return () => observer.disconnect();
   }, [shouldLoadGallery]);
 
+  useEffect(() => {
+    if (!shouldLoadGallery || galleryImagesReady) return undefined;
+
+    let cancelled = false;
+
+    preloadGalleryImages().then(() => {
+      if (!cancelled) {
+        setGalleryImagesReady(true);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [galleryImagesReady, shouldLoadGallery]);
+
   return (
     <div className={styles.block}>
       <p className={styles.caption}>📷 用镜头捕捉美好</p>
       <div className={styles.shell} ref={shellRef}>
-        {shouldLoadGallery ? (
+        {galleryImagesReady ? (
           <CircularGallery
             items={galleryItems}
             bend={2.6}
@@ -64,9 +99,8 @@ export function WhatShapesGallery() {
             scrollSpeed={2}
             scrollEase={0.045}
           />
-        ) : (
-          <div className={styles.placeholder} aria-hidden="true" />
-        )}
+        ) : null}
+        {!galleryImagesReady ? <div className={styles.placeholder} aria-hidden="true" /> : null}
       </div>
     </div>
   );
