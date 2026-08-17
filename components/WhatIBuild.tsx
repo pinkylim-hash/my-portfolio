@@ -167,11 +167,11 @@ export function WhatIBuild() {
                             {row.images ? (
                               row.images.map((image) => (
                                 <span key={image.src}>
-                                  <img src={image.src} alt={image.alt} />
+                                  <img loading="lazy" decoding="async" src={image.src} alt={image.alt} />
                                 </span>
                               ))
                             ) : row.image ? (
-                              <img src={row.image} alt={row.imageAlt ?? ""} />
+                              <img loading="lazy" decoding="async" src={row.image} alt={row.imageAlt ?? ""} />
                             ) : null}
                           </i>
                         </a>

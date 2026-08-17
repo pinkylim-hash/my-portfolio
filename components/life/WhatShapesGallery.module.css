@@ -3,10 +3,21 @@
 }
 
 .shell {
+  position: relative;
   width: 100%;
   height: clamp(430px, 56vw, 680px);
   overflow: hidden;
   background: var(--surface);
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 242, 0.86), rgba(244, 200, 46, 0.18), rgba(255, 250, 242, 0.86)),
+    var(--surface);
+  background-size: 220% 100%;
+  animation: gallery-placeholder 1.4s ease-in-out infinite;
 }
 
 .caption {
@@ -17,6 +28,16 @@
   font-weight: 600;
   line-height: 1.4;
   text-align: center;
+}
+
+@keyframes gallery-placeholder {
+  0% {
+    background-position: 120% 0;
+  }
+
+  100% {
+    background-position: -120% 0;
+  }
 }
 
 @media (max-width: 900px) {
