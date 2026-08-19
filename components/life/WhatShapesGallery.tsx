@@ -95,7 +95,8 @@ export function WhatShapesGallery() {
               key={item.image}
               src={item.image}
               alt=""
-              loading={index < 2 ? "eager" : "lazy"}
+              loading="eager"
+              fetchPriority={index < 3 ? "high" : "auto"}
               decoding="async"
             />
           ))}
