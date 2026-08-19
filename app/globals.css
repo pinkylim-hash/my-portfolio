@@ -646,7 +646,8 @@ body {
 
 .beyond-list {
   display: grid;
-  width: min(100%, 1120px);
+  width: min(calc(100% - clamp(28px, 5vw, 96px)), 1120px);
+  margin-left: clamp(18px, 3.2vw, 58px);
   border-top: 0;
   border-bottom: 1px solid rgba(87, 65, 47, .28);
 }
@@ -665,7 +666,12 @@ body {
 }
 
 .beyond-row span {
-  color: var(--yellow);
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  padding: 5px 11px 6px;
+  background: #5b4635;
+  color: #ffd33f;
   font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
   font-size: clamp(1rem, 1.35vw, 1.18rem);
   font-weight: 800;
@@ -683,6 +689,8 @@ body {
 
 .beyond-head span,
 .beyond-head p {
+  padding: 0;
+  background: transparent;
   color: var(--ink);
   font-size: .9rem;
   font-weight: 800;
